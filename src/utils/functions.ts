@@ -37,7 +37,6 @@ export function clickOutside(
     !node.contains(event.target as HTMLElement) &&
     !event.defaultPrevented &&
     handler();
-
   document.addEventListener("click", onClick, true);
 
   return {

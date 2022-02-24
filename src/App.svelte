@@ -1,23 +1,6 @@
 <script lang="ts">
-  import Header from "./components/Header.svelte";
-
-  export let title: string;
+  import Router from "svelte-spa-router";
+  import routes from "./routers";
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-</svelte:head>
-<svelte:body />
-
-<main>
-  <Header />
-  <p />
-</main>
-
-<style>
-  main {
-    text-align: center;
-    padding: 0;
-    margin: 0 auto;
-  }
-</style>
+<Router {routes} />
