@@ -1,5 +1,4 @@
 <script lang="ts">
-  export let width: string;
   export let height: string;
   export let headerHeight: string;
   let currentTab = "최근검색";
@@ -24,14 +23,17 @@
 
 <style>
   .wrapper {
+    box-shadow: 4px 4px 8px 0 rgb(0 0 0 / 30%);
     position: absolute;
     width: 100%;
-    height: 228px;
+    height: var(--height);
+    margin-top: -1px;
     background-color: #fff;
+    z-index: 1;
   }
   .head {
-    line-height: var(--height);
-    height: var(--height);
+    line-height: var(--h_height);
+    height: var(--h_height);
 
     display: flex;
   }

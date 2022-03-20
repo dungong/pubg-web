@@ -3,7 +3,7 @@
   import SearchHistorys from "./SearchHistorys.svelte";
 
   export let height = "32px";
-  export let container_height = "48px";
+  export let containerHeight = "48px";
   export let width = "340px";
 
   let isClicked = false;
@@ -17,10 +17,11 @@
 </script>
 
 <!-- --?? 형태의 문법은 어디서 나온 것인가 -->
-<section
+<form
   on:click={() => (isClicked = true)}
   use:clickOutside={() => (isClicked = false)}
-  style="--width:{width}; --c_height:{container_height};"
+  style="--width:{width}; --c_height:{containerHeight};"
+  method="get"
 >
   <input
     bind:value
@@ -31,17 +32,20 @@
   {#if isClicked}
     <SearchHistorys headerHeight="34px" height="228px" />
   {/if}
-</section>
+</form>
 
 <style>
-  section {
+  form {
     position: relative;
     line-height: var(--c_height);
     height: var(--c_height);
+    width: var(--width);
     vertical-align: middle;
   }
   input {
     height: var(--height);
     width: var(--width);
+    margin: 0;
+    outline: none;
   }
 </style>
