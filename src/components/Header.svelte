@@ -1,7 +1,6 @@
-<script>
-  import PgSearch from "./PgSearch.svelte";
+<script lang="ts">
+  import PgSearch from "./pgSearch.svelte";
   import { PUBG_MUSTARD } from "../utils/constants";
-  import SearchHistorys from "./SearchHistorys.svelte";
   const tabs = ["홈", "랭킹", "커뮤니티"];
   let currentTab = "홈";
 </script>
