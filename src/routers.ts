@@ -1,7 +1,7 @@
-import IndexView from "./pages/index.svelte";
+import Index from "./pages/index.svelte";
 
 const routes = {
-  "/": IndexView,
+  "/": Index,
 };
 
 export default routes;
